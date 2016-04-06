@@ -9,6 +9,20 @@ delete basejson.prefix;
 delete basejson.examples;
 delete basejson.globals;
 
+Object.keys(basejson.callbacks).forEach(function(name) {
+  delete basejson.callbacks[name].comments;
+  delete basejson.callbacks[name].description;
+  delete basejson.callbacks[name].line;
+  delete basejson.callbacks[name].lineto;
+  if (basejson.callbacks[name].args) {
+    basejson.callbacks[name].args.forEach(function(arg) {
+      delete arg.comment;
+    });
+  }
+  if (basejson.callbacks[name].return) {
+    delete basejson.callbacks[name].return.comment;
+  }
+})
 var groups = {};
 basejson.groups.forEach(function(group) {
   groups[group[0]] = group[1];
