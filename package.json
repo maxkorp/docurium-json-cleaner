@@ -1,6 +1,6 @@
 {
   "name": "docurium-json-cleaner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -11,6 +11,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxkorp/docurium-json-cleaner"
   },
   "bin": {
     "clean-json": "./src/main.js"
