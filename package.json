@@ -1,0 +1,20 @@
+{
+  "name": "docurium-json-cleaner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^0.26.7",
+    "honey": "^0.0.8",
+    "json-honey": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "clean-json": "./src/main.js"
+  },
+  "author": "Max Korp",
+  "license": "MIT"
+}
