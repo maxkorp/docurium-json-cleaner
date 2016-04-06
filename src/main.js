@@ -22,7 +22,23 @@ Object.keys(basejson.callbacks).forEach(function(name) {
   if (basejson.callbacks[name].return) {
     delete basejson.callbacks[name].return.comment;
   }
-})
+});
+
+Object.keys(basejson.functions).forEach(function(name) {
+  delete basejson.functions[name].comments;
+  delete basejson.functions[name].line;
+  delete basejson.functions[name].lineto;
+  delete basejson.functions[name].examples;
+  if (basejson.functions[name].args) {
+    basejson.functions[name].args.forEach(function(arg) {
+      delete arg.comment;
+    });
+  }
+  if (basejson.functions[name].return) {
+    delete basejson.functions[name].return.comment;
+  }
+});
+
 var groups = {};
 basejson.groups.forEach(function(group) {
   groups[group[0]] = group[1];
