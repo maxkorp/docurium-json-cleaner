@@ -58,7 +58,7 @@ basejson.files.forEach(function(file) {
 
 var groups = {};
 basejson.groups.forEach(function(group) {
-  groups[group[0]] = group[1];
+  groups[group[0]] = group[1].sort();
 })
 basejson.groups = groups;
 
