@@ -49,7 +49,6 @@ basejson.types.forEach(function(type) {
   delete type[1].lineto;
   delete type[1].block;
   delete type[1].tdef;
-  delete type[1].decl;
 });
 basejson.types = types;
 
